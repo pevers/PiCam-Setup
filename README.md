@@ -20,7 +20,7 @@ Execute the script
 
 ```
 cd PiCam-Setup
-sudo chmod +x /picam_setup.sh
+sudo chmod +x picam_setup.sh
 sudo ./picam_setup.sh
 ```
 
