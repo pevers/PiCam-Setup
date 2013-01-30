@@ -13,6 +13,7 @@ sudo apt-get install -y git
 After this you can download the script
 
 ```
+cd
 git clone git://github.com/Ploeper/PiCam-Setup.git
 ```
 
