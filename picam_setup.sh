@@ -34,5 +34,5 @@ mkdir tmp
 cd tmp
 svn co https://mjpg-streamer.svn.sourceforge.net/svnroot/mjpg-streamer mjpg-streamer
 cd mjpg-streamer/mjpg-streamer
-make
+sudo make
 echo -e "====DONE====\n"
