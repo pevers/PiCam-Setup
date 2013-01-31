@@ -25,4 +25,12 @@ sudo chmod +x picam_setup.sh
 sudo ./picam_setup.sh
 ```
 
+After the installation you can run the picam_run.sh script to launch the webcam with some default options.
+To launch the webcam streamer with the parameters for your webcam, edit the picam_run.sh script. To launch the webcam on boot with
+your parameters, edit the picam_service.sh script and launch the setup script. To stop the webcam streamer run
+
+```
+killall mpjg_streamer
+```
+
 
