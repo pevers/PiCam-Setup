@@ -37,7 +37,7 @@ function enablePiCamAtStart()
 {
     clear
     printMsg "Enabling PiCam on boot."
-    cp -f picam_service.sh /etc/init.d/
+    cp picam_service.sh /etc/init.d/
     chmod +x /etc/init.d/picam_service.sh
     update-rc.d picam_service.sh defaults
 }
