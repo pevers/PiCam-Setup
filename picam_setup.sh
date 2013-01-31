@@ -37,12 +37,8 @@ function enablePiCamAtStart()
 {
     clear
     printMsg "Enabling PiCam on boot."
-    if [[ ! -f picam_service.sh ]]; then
-        dialog --backtitle "PiCam Setup script. Installation folder: $rootdir for user $user" --msgbox "Can't find the picam_service.sh script." 22 76
-    else
-	cp -f picam_service.sh /etc/init.d/
-	chmod +x /etc/init.d/picam_service.sh
-    fi
+    cp -f picam_service.sh /etc/init.d/
+    chmod +x /etc/init.d/picam_service.sh
     update-rc.d picam_service.sh defaults
 }
 
