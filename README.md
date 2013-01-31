@@ -27,10 +27,26 @@ sudo ./picam_setup.sh
 
 After the installation you can run the picam_run.sh script to launch the webcam with some default options.
 To launch the webcam streamer with the parameters for your webcam, edit the picam_run.sh script. To launch the webcam on boot with
-your parameters, edit the picam_service.sh script and launch the setup script. To stop the webcam streamer run
+your parameters, edit the picam_service.sh script and launch the setup script.
+
+# Access your webcam
+Get the IP adress of your Raspberry
+
+```
+ifconfig
+```
+
+The eth0 interface should display your IP-adress. Type 'your-ip:8081' in your address bar and you should see the webserver of mpjg-streamer.
+
+# Internet access/Webcam Pi
+To access the webcam through Webcam Pi, you must forward your router. There are a lot of tutorials on this topic (http://www.wikihow.com/Set-up-Port-Forwarding-on-a-Router).
+The default port is 8081 and you should forward this to the Raspberry Pi device.
+
+# Stop
+
+To stop the webcam streamer run
 
 ```
 killall mpjg_streamer
 ```
-
 
