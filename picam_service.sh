@@ -1,38 +1,37 @@
-#!/bin/sh
+#!/bin/bash
 # /etc/init.d/picam_service.sh
 
-start()
+RESOLUTION="640x480"
+FRAMERATE="10"
+MJPG_WEB_ROOT="/usr/www"
+PORT="8081"
+
+function startStreamer()
 {
- mjpg_streamer -b -i "/usr/lib/input_uvc.so -d /dev/video0" -o "/usr/lib/output_http.so -p 8080 -w /var/www/mjpg_streamer -n"
+    mjpg_streamer -b -i "/usr/lib/input_uvc.so -d /dev/video0 -f $FRAMERATE -r $RESOLUTION" -o "/usr/lib/output_http.so -p $PORT -w $MJPG_WEB_ROOT" &
 }
 
 # regular init script
 case "$1" in
         start)
                 echo "Starting mjpg_streamer"
-                start
+                startStreamer
                 ;;
         stop)
-                f_message "Stopping mjpg_streamer"
+                echo "Stopping mjpg_streamer"
                 killall mjpg_streamer
                 ;;
+	status)
+		echo "Not supported yet"
+		;;
         restart)
-                f_message "Restarting daemon: mjpg_streamer"
+                echo "Restarting daemon: mjpg_streamer"
                 killall mjpg_streamer
                 start
                 sleep 2
                 ;;
-        status)
-                pid=`ps -A | grep mjpg_streamer | grep -v "grep" | grep -v mjpg_streamer. | awk ‘{print $1}’ | head -n 1`
-                if [ -n "$pid" ];
-                then
-                        echo "mjpg_streamer is running with pid ${pid}"
-                else
-                        echo "Could not find mjpg_streamer running"
-                fi
-                ;;
         *)
-                echo "Usage: $0 {start|stop|status|restart}"
+                echo "Usage: $0 {start|stop|restart}"
                 exit 1
                 ;;
 esac
