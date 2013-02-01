@@ -75,12 +75,12 @@ function mainSetup()
 {
     sudo chmod +x /picam_run.sh
     printMsg "Installing dependencies"
-    apt-get install -y build-essential subversion libjpeg8-dev imagemagick
+    apt-get install -y build-essential subversion libv4l-dev libjpeg8-dev imagemagick
     echo -e "Installing mpeg-streamer"
     svn co https://mjpg-streamer.svn.sourceforge.net/svnroot/mjpg-streamer /etc/mjpg-streamer
     rootdir=/etc/mjpg-streamer/mjpg-streamer
     cd "$rootdir"
-    sudo make clean all
+    sudo make USE_LIB4VL=true clean all
     sudo make DESTDIR=/usr install 
     dialog --backtitle "PiCam Setup script. Installation folder: $rootdir for user $user" --msgbox "Done! You can now setup the boot behaviour of the streamer." 22 76    
 }
