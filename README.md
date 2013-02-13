@@ -44,6 +44,9 @@ ifconfig
 
 The eth0 interface should display your IP-adress. Type 'your-ip:8081' in your address bar and you should see the webserver of mpjg-streamer.
 
+## Windows Phone App access
+In the URL field of the app type 'http://ip:port/?action=stream. Leave the username and password field blank if you have no security settings.
+
 # Internet access/Webcam Pi
 To access the webcam through Webcam Pi, you must forward your router. There are a lot of tutorials on this topic (http://www.wikihow.com/Set-up-Port-Forwarding-on-a-Router).
 The default port is 8081 and you should forward this to the Raspberry Pi device.
