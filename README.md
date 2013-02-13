@@ -25,9 +25,15 @@ sudo chmod +x picam_setup.sh
 sudo ./picam_setup.sh
 ```
 
-After the installation you can run the picam_run.sh script to launch the webcam with some default options.
+After the installation you can run the picam_run.sh script to launch the webcam with some default example options.
+
+```
+sudo chmod +x picam_run.sh
+sudo ./picam_run.sh
+```
+
 To launch the webcam streamer with the parameters for your webcam, edit the picam_run.sh script. To launch the webcam on boot with
-your parameters, edit the picam_service.sh script and launch the setup script.
+your parameters, edit the picam_service.sh script and launch the boot option in the setup script.
 
 # Access your webcam
 Get the IP adress of your Raspberry
@@ -41,6 +47,15 @@ The eth0 interface should display your IP-adress. Type 'your-ip:8081' in your ad
 # Internet access/Webcam Pi
 To access the webcam through Webcam Pi, you must forward your router. There are a lot of tutorials on this topic (http://www.wikihow.com/Set-up-Port-Forwarding-on-a-Router).
 The default port is 8081 and you should forward this to the Raspberry Pi device.
+
+## Security
+To secure your webcam, add the following parameter to your launch-script
+
+```
+mpeg-streamer ... -c username:password
+```
+
+Don't forget to rerun picam_setup.sh if you edited the picam_service.sh file.
 
 # Stop
 
