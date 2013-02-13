@@ -54,9 +54,14 @@ sudo chmod +x picam_setup.sh
 sudo ./picam_setup.sh
 </code></pre>
 
-<p>After the installation you can run the picam_run.sh script to launch the webcam with some default options.
-To launch the webcam streamer with the parameters for your webcam, edit the picam_run.sh script. To launch the webcam on boot with
-your parameters, edit the picam_service.sh script and launch the setup script.</p>
+<p>After the installation you can run the picam_run.sh script to launch the webcam with some default example options.</p>
+
+<pre><code>sudo chmod +x picam_run.sh
+sudo ./picam_run.sh
+</code></pre>
+
+<p>To launch the webcam streamer with the parameters for your webcam, edit the picam_run.sh script. To launch the webcam on boot with
+your parameters, edit the picam_service.sh script and launch the boot option in the setup script.</p>
 
 <h1>Access your webcam</h1>
 
@@ -71,6 +76,19 @@ your parameters, edit the picam_service.sh script and launch the setup script.</
 
 <p>To access the webcam through Webcam Pi, you must forward your router. There are a lot of tutorials on this topic (<a href="http://www.wikihow.com/Set-up-Port-Forwarding-on-a-Router">http://www.wikihow.com/Set-up-Port-Forwarding-on-a-Router</a>).
 The default port is 8081 and you should forward this to the Raspberry Pi device.</p>
+
+<h2>Security</h2>
+
+<p>To secure your webcam, add the following parameter to your launch-script</p>
+
+<pre><code>mpeg-streamer ... -c username:password
+</code></pre>
+
+<p>Don't forget to rerun picam_setup.sh if you edited the picam_service.sh file.</p>
+
+<h2>Windows Phone App access</h2>
+
+<p>In the URL field of the app type 'http://ip:port/?action=stream. Leave the username and password field blank if you have no security settings.</p>
 
 <h1>Stop</h1>
 
