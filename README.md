@@ -1,3 +1,24 @@
+How to use this app
+===================
+
+This app shows mjpeg (also known as webcam) streams. Type the URL of your mjepg-stream in the URL-box and choose connect. 
+A lot of streams can be found here: http://www.mjpeg.net.
+
+These examples worked the last time I checked:
+
+URL: http://82.147.33.166/mjpg/video.mjpg?camera=1
+URL: http://87.213.108.6/mjpg/video.mjpg?camera=1
+
+Enter these URL's in the URL-box of the Webcam Pi app and leave the uername and password blank.
+
+Setup your OWN MJPEG stream
+===========================
+
+To install a webcam streamer on Windows, download webcamXP at http://www.webcamxp.com/home.aspx and install.
+The standard URL of your WebcamXP stream is http://IPADDRESS/cam_[CHANNEL].cgi.
+
+To setup your own MJPEG stream from a Raspberry (small computer) or LINUX computer, follow the following steps.
+
 PiCam-Setup
 ===========
 
