@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Picam-setup : A simple install script for initializing your Raspberry Pi with mpeg-streamer to stream your webcam." />
+    <meta name="description" content="Webcam Pi : How to use Webcam Pi and connect a raspberry" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Picam-setup</title>
+    <title>Webcam Pi</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/Ploeper/PiCam-Setup">View on GitHub</a>
 
-          <h1 id="project_title">Picam-setup</h1>
-          <h2 id="project_tagline">A simple install script for initializing your Raspberry Pi with mpeg-streamer to stream your webcam.</h2>
+          <h1 id="project_title">Webcam Pi</h1>
+          <h2 id="project_tagline">How to use Webcam Pi and connect a raspberry</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/Ploeper/PiCam-Setup/zipball/master">Download this project as a .zip file</a>
@@ -31,7 +31,29 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>PiCam-Setup</h1>
+        <h1>How to use this app</h1>
+
+<p>This app shows mjpeg (also known as webcam) streams. Type the URL of your mjepg-stream in the URL-box and choose connect. 
+A lot of streams can be found here: <a href="http://www.mjpeg.net">http://www.mjpeg.net</a>.</p>
+
+<p>These examples worked the last time I checked:</p>
+
+<p>URL: <a href="http://82.147.33.166/mjpg/video.mjpg?camera=1">http://82.147.33.166/mjpg/video.mjpg?camera=1</a></p>
+
+<p>URL: <a href="http://87.213.108.6/mjpg/video.mjpg?camera=1">http://87.213.108.6/mjpg/video.mjpg?camera=1</a></p>
+
+<p>Enter these URL's in the URL-box of the Webcam Pi app and leave the uername and password blank.</p>
+
+<p><img src="http://www.peterevers.nl/picam/Screen5.png" alt="Example of use"></p>
+
+<h1>Setup your OWN MJPEG stream</h1>
+
+<p>To install a webcam streamer on Windows, download webcamXP at <a href="http://www.webcamxp.com/home.aspx">http://www.webcamxp.com/home.aspx</a> and install.
+The standard URL of your WebcamXP stream is http://IPADDRESS/cam_[CHANNEL].cgi.</p>
+
+<p>To setup your own MJPEG stream from a Raspberry (small computer) or LINUX computer, follow the following steps.</p>
+
+<h1>PiCam-Setup</h1>
 
 <p>A simple install script for initializing your Raspberry Pi with mpeg-streamer to stream your webcam on a Raspberry PI.
 To run the script make sure your repository is up-to-date and Git and dialog is installed. </p>
@@ -102,7 +124,7 @@ The default port is 8081 and you should forward this to the Raspberry Pi device.
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Picam-setup maintained by <a href="https://github.com/Ploeper">Ploeper</a></p>
+        <p class="copyright">Webcam Pi maintained by <a href="https://github.com/Ploeper">Ploeper</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
