@@ -77,7 +77,7 @@ function mainSetup()
     printMsg "Installing dependencies"
     apt-get install -y build-essential subversion libv4l-dev libjpeg8-dev imagemagick
     echo -e "Installing mpeg-streamer"
-    svn co https://mjpg-streamer.svn.sourceforge.net/svnroot/mjpg-streamer /etc/mjpg-streamer
+    svn co https://svn.code.sf.net/p/mjpg-streamer/code /etc/mjpg-streamer
     rootdir=/etc/mjpg-streamer/mjpg-streamer
     cd "$rootdir"
     sudo make USE_LIB4VL=true clean all
